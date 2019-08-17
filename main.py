@@ -1,4 +1,4 @@
-from wrap import wrap_calc
+from wrap import wrap_calc, wrap_message
 
 
 
@@ -14,5 +14,11 @@ def render(x, y):
 def pow(x, y):
     return x ** y
 
+@wrap_message
+def message(text):
+    print(text)
+
 if __name__ == '__main__':
     print(calc(4,5))
+
+    message('Здравствуйте, это декораторы')
