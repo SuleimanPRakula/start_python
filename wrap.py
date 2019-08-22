@@ -1,3 +1,4 @@
+
 def wrap_calc(func):
     def result_func(x,y):
         x = x ** 2
@@ -8,9 +9,9 @@ def wrap_calc(func):
     return result_func
 
 def wrap_message(func):
-    def result_func(text):
+    def result_func():
         print('от Директора')
-        print(text)
+        func()
         print('С наилучшими пожеланиями, Спасибо что написали')
     
     return result_func
